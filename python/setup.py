@@ -23,7 +23,7 @@ elif sys.platform == "freebsd8":
     include_dirs = ['/usr/local/include']
     link_args = ["-L/usr/local/lib", "-L/usr/lib"]
 else:
-    if sys.platform == "linux2":
+    if sys.platform == "linux" or sys.platform == "linux2":
         import platform
         if platform.linux_distribution()[0] == "Ubuntu":
             # Ubuntu names its boost libraries a bit differently.
